@@ -1,0 +1,10 @@
+C:\Users\basso\source\repos\ClientForm\ClientForm\bin\Debug\ClientForm.exe.config
+C:\Users\basso\source\repos\ClientForm\ClientForm\bin\Debug\ClientForm.exe
+C:\Users\basso\source\repos\ClientForm\ClientForm\bin\Debug\ClientForm.pdb
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.csprojAssemblyReference.cache
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.Form1.resources
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.Properties.Resources.resources
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.csproj.GenerateResource.cache
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.csproj.CoreCompileInputs.cache
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.exe
+C:\Users\basso\source\repos\ClientForm\ClientForm\obj\Debug\ClientForm.pdb
