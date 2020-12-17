@@ -55,6 +55,7 @@ namespace ClientForm
             this.txtIPServer.Name = "txtIPServer";
             this.txtIPServer.Size = new System.Drawing.Size(100, 22);
             this.txtIPServer.TabIndex = 1;
+            this.txtIPServer.Text = "127.0.0.1";
             // 
             // label2
             // 
@@ -71,6 +72,7 @@ namespace ClientForm
             this.txtPorta.Name = "txtPorta";
             this.txtPorta.Size = new System.Drawing.Size(100, 22);
             this.txtPorta.TabIndex = 3;
+            this.txtPorta.Text = "23000";
             // 
             // btnConnetti
             // 
@@ -93,6 +95,7 @@ namespace ClientForm
             // 
             // txtMessaggio
             // 
+            this.txtMessaggio.Enabled = false;
             this.txtMessaggio.Location = new System.Drawing.Point(101, 60);
             this.txtMessaggio.Name = "txtMessaggio";
             this.txtMessaggio.Size = new System.Drawing.Size(253, 22);
@@ -100,12 +103,14 @@ namespace ClientForm
             // 
             // btnInvia
             // 
+            this.btnInvia.Enabled = false;
             this.btnInvia.Location = new System.Drawing.Point(378, 54);
             this.btnInvia.Name = "btnInvia";
             this.btnInvia.Size = new System.Drawing.Size(75, 32);
             this.btnInvia.TabIndex = 7;
             this.btnInvia.Text = "Invia";
             this.btnInvia.UseVisualStyleBackColor = true;
+            this.btnInvia.Click += new System.EventHandler(this.btnInvia_Click);
             // 
             // lstMessaggiServ
             // 
@@ -113,14 +118,14 @@ namespace ClientForm
             this.lstMessaggiServ.ItemHeight = 16;
             this.lstMessaggiServ.Location = new System.Drawing.Point(15, 111);
             this.lstMessaggiServ.Name = "lstMessaggiServ";
-            this.lstMessaggiServ.Size = new System.Drawing.Size(339, 340);
+            this.lstMessaggiServ.Size = new System.Drawing.Size(623, 340);
             this.lstMessaggiServ.TabIndex = 8;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(473, 468);
+            this.ClientSize = new System.Drawing.Size(650, 468);
             this.Controls.Add(this.lstMessaggiServ);
             this.Controls.Add(this.btnInvia);
             this.Controls.Add(this.txtMessaggio);

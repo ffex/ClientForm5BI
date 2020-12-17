@@ -42,9 +42,56 @@ namespace ClientForm
                 MessageBox.Show("Porta vuota o non valida", "Errore");
             }
             //Controllo porte
+            if (nPort <0 && nPort > 65535)
+            {
+                MessageBox.Show("La porta deve essere compresa fra 0 e 65535", "Errore");
+            }
+            try { 
 
-            client.Connect(ipaddr, nPort);
+                client.Connect(ipaddr, nPort);
+            }catch (Exception ex)
+            {
+                MessageBox.Show("Errore di connessione", "Errore");
+                if(client != null)
+                {
+                    if (client.Connected)
+                    {
+                        client.Shutdown(SocketShutdown.Both);
+                    }
+                    client.Close();
+                    
+                    client.Dispose();
+                }
+            }
+            txtIPServer.Enabled = false;
+            txtPorta.Enabled = false;
+            btnConnetti.Enabled = false;
 
+            txtMessaggio.Enabled = true;
+            btnInvia.Enabled = true;
+        }
+
+        private void btnInvia_Click(object sender, EventArgs e)
+        {
+            byte[] sendBuff = new byte[512];
+            byte[] recvBuff = new byte[512];
+            int nRecvBytes = 0;
+            string recvString = "";
+            try
+            {
+            sendBuff = Encoding.ASCII.GetBytes(txtMessaggio.Text);
+            client.Send(sendBuff);
+
+            nRecvBytes= client.Receive(recvBuff);
+            recvString = Encoding.ASCII.GetString(recvBuff, 0, nRecvBytes);
+
+                lstMessaggiServ.Items.Add(recvString);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Errore");
+             
+            }
         }
     }
 }
